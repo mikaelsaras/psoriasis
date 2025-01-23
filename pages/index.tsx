@@ -8,13 +8,13 @@ import Link from 'next/link';
 const App = () => {
   const [language, setLanguage] = React.useState('sv');
 
-  const handleChangeLanguage = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleChangeLanguage = (event) => {
     setLanguage(event.target.value);
   };
 
   return (
     <>
-      <Head >
+      <Head>
         <title>Psoriasis Mini-Räknare</title>
       </Head>
       <AppBar position="static">
@@ -42,7 +42,7 @@ const App = () => {
         </Typography>
         <div style={{ marginTop: '20px' }}>
           <Button variant="contained" color="primary" style={{ margin: '10px' }}>
-            <Link href="/calculator/bsa" passHref>
+            <Link href="/bsa" passHref>
               BSA, PASI, zPASI Skattning
             </Link>
           </Button>
